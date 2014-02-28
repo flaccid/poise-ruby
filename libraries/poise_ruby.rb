@@ -21,8 +21,8 @@ class Chef
     include Poise
     actions(:upgrade, :install, :remove)
 
-    attribute(:flavor, name_attribute: true)
-    attribute(:version, kind_of: String)
+    attribute(:flavor, name_attribute => true)
+    attribute(:version, kind_of => String)
 
     def package_name
       "poise-#{flavor}"
